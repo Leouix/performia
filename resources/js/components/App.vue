@@ -1,4 +1,5 @@
 <template>
+
   <div class="container">
 
     <form id="form-houses" class="p-3" v-on:submit="onTouch">
@@ -45,19 +46,18 @@
 
     </form>
 
-
     <div class="container results" >
       <div class="no-results alert alert-danger" v-if="emptyResult">Results not found</div>
       <table class="table-results table" v-show="showTable">
         <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Bedrooms</th>
-            <th>Bathrooms</th>
-            <th>Storeys</th>
-            <th>Garages</th>
-          </tr>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Bedrooms</th>
+          <th>Bathrooms</th>
+          <th>Storeys</th>
+          <th>Garages</th>
+        </tr>
         </thead>
         <tbody id="table-results-body">
 
@@ -134,12 +134,12 @@ export default {
           'Content-Type': 'multipart/form-data'
         }
       })
-      .then((response) => {
-        return response
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+          .then((response) => {
+            return response
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
 
     },
     clearTable() {
